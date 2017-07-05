@@ -1,9 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Crystals Collector Game</title>
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> <!-- load CSS files before script files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- load jQuery before other scripts-->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
+  <div id="container">
+
+    <div id="titleDiv">   <!-- Insert game title here -->
+      <h1 id="titleId">CrystalsCollector!</h1>
+    </div> <!-- end titleDiv -->
+
+
+    <div id="instructionDiv">  <!-- Display game rules here -->
+      <p class="instructionClass">At the beginning of each game, you are given a target number, between 19-120.</p>
+      <p class="instructionClass">Your objective is to make your score exactly match this number.</p>
+      <ul>
+        <li>Click on the crystals below. Each crystal adds a specific amount of points to your score.</li>
+        <li>Each crystal carries a value between 1-12, and these values change for each game. </li>
+      </ul>
+    </div> <!-- end instructionDiv -->
+
+
+    <div id="targetNumDiv">  <!-- Display random # between 19-120 that player needs to reach -->
+      <p id="targetNumId">Your target number for this round is: </p>
+    </div> <!-- end targetNumDiv -->
+
+
+    <div id="scoreboardDiv">  <!-- Display # of Wins and Losses here -->
+      <p id="scoreboardId">Current score: </p> 
+    </div> <!-- end scoreboardDiv -->
+
+
+    <div id="crystalDiv"> <!-- Display images of 4 crystals here. Each w. value between 1-12 -->
+     <table id="crystalId">
+       <tr>
+       	  <td>jewel1</td>
+       	  <td>jewel2</td>
+       	  <td>jewel3</td>
+       	  <td>Jewel4</td>
+       </tr> 
+     </table>
+    </div> <!-- end crystalDiv -->
+
+    <div id="totalScoreDiv">  <!-- Display running total of the player's score within a game -->
+    <p id="totalScordId">Your total score is: </p>
+  </div>
+
+</div> <!-- end container -->
 
 </body>
 </html>

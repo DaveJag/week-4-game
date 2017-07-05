@@ -1,0 +1,82 @@
+/* David Jagodowski - HW04 */
+
+body  { 
+  background: #000000;
+  color: #80c0c0;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+ }
+
+ h1  {
+ 	font-size: 3em;
+ 	line-height: 2em;
+ 	text-align: center;
+ }
+
+h2  {
+	font-size: 2.5em;
+}
+
+
+#container {
+  width: 640px;
+  border: 1pt solid blue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#titleDiv {
+  border: 1pt solid lightblue;
+  margin-bottom: 15px;
+
+}
+
+#instructionDiv {
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: .9em;
+  border: 1pt solid lightblue;
+}
+
+#targetNumDiv {
+  display: block;
+  width: 55%;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: = 60%;
+  border: 1pt solid lightblue;
+  float: left;
+}
+
+#scoreboardDiv {
+  display: block;
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1pt solid lightblue;
+  width: 30%;
+  float: right;
+}
+
+#crystalDiv {
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1pt solid lightblue;
+}
+
+#totalScoreDiv {
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1pt solid lightblue;
+}
+
+li {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: disc;
+  list-style-image: none;
+}
