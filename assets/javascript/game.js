@@ -2,8 +2,12 @@
 $(document).ready(function()  {  // Document ready function. Waits until HTML page loads before running this script
 
   //Begin Main Program
-  getRandomTargetNum();
+  var jewelCount = 4; // The number of jewels
+  var jewelNumArray = []; //Holds random values for each jewel
 
+  getRandomTargetNum();
+  assignJewelNums();
+  
   //End Main Program
 
 
@@ -18,5 +22,26 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
 };
 
 
+  function assignJewelNums()  {
+    for (var i = 0; i < jewelCount; i++) {
+      //Generate a whole random number between 1 and 12.
+      var x = Math.floor(Math.random() * 12 + 1);
+      jewelNumArray[i] = x;
+    }
+  /* test values 
+      for (i = 0; i < jewelNumArray.length; i++) {
+      	alert("Jewel " + i + " has value " + jewelNumArray[i]);
+      }
+      return jewelNumArray; */
+};
 
+     
+/*
+    
+     function countJewelClicks() {
+	  
+
+     }
+
+  */   
 }); // end document ready
