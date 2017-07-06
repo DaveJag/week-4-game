@@ -16,6 +16,14 @@ body  {
 
 h2  {
 	font-size: 2.5em;
+  line-height: 1.7em;
+  text-align: center;
+}
+
+h3  {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  /*text-align: center; */
 }
 
 
@@ -41,8 +49,9 @@ h2  {
 }
 
 #targetNumDiv {
-  display: block;
+  display: block; 
   width: 55%;
+  /* min-height: 80px; */
   padding: 15px;
   margin-bottom: 15px;
   width: = 60%;
@@ -53,7 +62,8 @@ h2  {
 #scoreboardDiv {
   display: block;
   width: 95%;
-  padding: 15px;
+  /* min-height: 80px;
+ */  padding: 15px;
   margin-bottom: 15px;
   border: 1pt solid lightblue;
   width: 30%;
@@ -61,22 +71,37 @@ h2  {
 }
 
 #crystalDiv {
+  clear: both;
   width: 95%;
   padding: 15px;
   margin-bottom: 15px;
+  margin-top: 15px;
   border: 1pt solid lightblue;
 }
 
 #totalScoreDiv {
+  clear: both;
   width: 95%;
   padding: 15px;
   margin-bottom: 15px;
   border: 1pt solid lightblue;
 }
 
-li {
+li {   /*Undo what the reset.css file does to list items */ 
   display: list-item;
   list-style-position: inside;
   list-style-type: disc;
   list-style-image: none;
+}
+
+table {
+  width: 100%;
+}
+
+#jewel1,
+#jewel2,
+#jewel3,
+#jewel4 {
+  width: 96px;
+  height: 96px;
 }
