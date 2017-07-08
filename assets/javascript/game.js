@@ -19,24 +19,35 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
     } 
 
   function countClicks() {
-    $("#jewel0").click(updateScore); 
-    $("#jewel1").click(updateScore); 
-    $("#jewel2").click(updateScore); 
-    $("#jewel3").click(updateScore); 
-    console.log("end of function countClicks");
+   // var newTotal;
+    console.log("countClick: totalScore is " + totalScore);
+    $("#jewel0").click(function() { 
+      console.log("click0");
+      totalScore += jewelArray[0];
+      $("#totalScoreId").html("<h3> " + totalScore + "</h3>");
+    });
+    $("#jewel1").click(function()  { 
+      console.log("click1");
+      totalScore += jewelArray[1];
+      $("#totalScoreId").html("<h3> " + totalScore + "</h3>");
+    });
+    $("#jewel2").click(function() {
+     console.log("click2"); 
+      totalScore += jewelArray[2]; 
+      $("#totalScoreId").html("<h3> " + totalScore + "</h3>");
+    });
+    $("#jewel3").click(function()  {
+      console.log("click3"); 
+      totalScore += jewelArray[3];
+      $("#totalScoreId").html("<h3> " + totalScore + "</h3>");
+    });
+        
+   // totalScore += newTotal;
+   // $("#totalScoreId").html("<h3> " + totalScore + "</h3>");
+   console.log("end of function countClicks");
   }
 
-  function updateScore(totalScore) {
-    console.log("updateScore: totalScore = " + totalScore);
-    var newTotal = parseInt(totalScore + jewelArray[0]);
-    console.log("updateScore: newTotal = " + newTotal);
-    totalScore = newTotal;
-    $("#totalScoreId").html = (totalScore);
-    console.log("end of function updateScore");
-    return totalScore;  
-}
-
-  
+    
   //End Main Program
 
 
