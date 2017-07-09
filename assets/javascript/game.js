@@ -64,6 +64,7 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
     if (totalScore === targetNum) {
       //Player wins
       console.log("Player wins");
+      $("#gameStatusId").html("<h2>YOU WON!</h2>");
       playerWon = true;
       winCount += 1;
       $("#winsId").html(" " + winCount);   // Update the Wins scoreboard.
@@ -72,6 +73,7 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
     else if (totalScore > targetNum) {
       //Player loses
       console.log("Player loses");
+      $("#gameStatusId").html("<h2>Uh-Oh... YOU LOST!</h2>");
       playerWon = false;
       lossCount += 1;
       $("#lossesId").html(" " + lossCount); //Update the Losses scoreboard.
@@ -80,17 +82,22 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
     } else { 
       // game still in progres 
       console.log("Game still in progress");
+      $("#gameStatusId").html("<h2>Game in Progress.</h2>");
+
     }
   }  
 
   function playAgain() {
-      if (playerWon == true) { 
-        window.confirm("YOU WON! Would you like to play again?") == true; 
-          refresh();
+
+    if (playerWon == true) { 
+      $("#gameStatusId").html('<p>You WON! Play again? Click <span id="replay"> HERE. </span></p>');
+      $("#replay").click(refresh);   //Event listener
+        //window.confirm("YOU WON! Would you like to play again?") == true; 
       } else {
-          window.confirm("UH-OH... YOU LOST! Would you like to play again?") == true;  
-          refresh();
-        }
+        $("#gameStatusId").html('<p>You Lost! Click <span id="replay"> HERE </span> to try again.</p>');
+        $("#replay").click(refresh);
+          //window.confirm("UH-OH... YOU LOST! Would you like to play again?") == true;
+        } 
   }
 
   function getRandomTargetNum() {
@@ -100,9 +107,8 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
     // Append to targetNumDiv
     $("#targetNumId").html("<h2> " + x + " </h2>");
     //alert("Is the program getting here?");
-    targetNum = x
+    targetNum = x;
     return targetNum;
-
 };
 
 
@@ -125,6 +131,8 @@ function refresh() {
   $("#totalScoreId").html("<h3> " + totalScore + "</h3>");   // Display zero score
   getRandomTargetNum();  //Get a new random number 
   jewelArray = assignJewelNums();  //Assign new random numbers to the jewels
+  playerWon = false;            //Reset boolean flag.
+  $("#gameStatusId").html(""); // Reset the game status.
 } 
  
 

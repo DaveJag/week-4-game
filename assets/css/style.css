@@ -87,6 +87,16 @@ h3  {
   border: 1pt solid lightblue;
 }
 
+#gameStatusDiv  {
+  clear: both;
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  border: 1pt solid lightblue;
+
+}
+
 li {   /*Undo what the reset.css file does to list items */ 
   display: list-item;
   list-style-position: inside;
@@ -104,4 +114,8 @@ table {
 #jewel4 {
   width: 96px;
   height: 96px;
+}
+
+#replay {
+  color: red;
 }
