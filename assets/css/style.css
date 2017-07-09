@@ -1,51 +1,56 @@
 /* David Jagodowski - HW04 */
 
 body  { 
-  background: #000000;
-  color: #80c0c0;
+ /* background: #000000; */
+  color: #000000;
   font-family: arial, helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
  }
 
  h1  {
- 	font-size: 3em;
- 	line-height: 2em;
+ 	font-size: 4em;
+ 	line-height: 1.5em;
  	text-align: center;
+  font-weight: bold;
  }
 
 h2  {
-	font-size: 2.5em;
+	font-size: 2.8em;
   line-height: 1.7em;
   text-align: center;
 }
 
 h3  {
   font-size: 1.4em;
-  line-height: 1.5em;
-  /*text-align: center; */
+  line-height: 1.1em;
+  color: gold;
+  /*text-align: center; */ 
 }
 
 
 #container {
   width: 640px;
-  border: 1pt solid blue;
+ border: 4pt solid #000; 
   margin-left: 10px;
   margin-top: 10px;
+  background-image: url("../images/background1.jpg"); 
 }
 
 #titleDiv {
-  border: 1pt solid lightblue;
-  margin-bottom: 15px;
+  /*border: 1pt solid lightblue; */
+   color: gold; 
 
 }
 
 #instructionDiv {
   width: 95%;
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: .9em;
-  border: 1pt solid lightblue;
+  /* border: 1pt solid lightblue; */
+  color: black;
+  border-bottom: 1pt solid lightblue;
 }
 
 #targetNumDiv {
@@ -55,8 +60,17 @@ h3  {
   padding: 15px;
   margin-bottom: 15px;
   width: = 60%;
-  border: 1pt solid lightblue;
+  /* border: 1pt solid lightblue; */
   float: left;
+}
+
+.targetNumClass {
+  font-size: 1.2em;
+}
+
+#targetNumId {
+  color: gold;
+  font-weight: bold;
 }
 
 #scoreboardDiv {
@@ -65,9 +79,39 @@ h3  {
   /* min-height: 80px;
  */  padding: 15px;
   margin-bottom: 15px;
-  border: 1pt solid lightblue;
+  /* border: 1pt solid lightblue; */
   width: 30%;
   float: right;
+}
+
+#scoreboardId {
+ font-size: 1.2em;
+
+}
+
+#winsId {
+  color: gold;
+  font-weight: bold;
+}
+
+#lossesId {
+  color: gold;
+  font-weight: bold;
+}
+
+#clearButtonId {
+  font-size: .6em;
+  line-height: 1.2em;
+  text-align: right;
+}
+
+#clrButton {
+  width: 20px;
+  height:20px;  
+}
+
+.scoreboardClass {
+  font-size: 1.2em;
 }
 
 #crystalDiv {
@@ -77,6 +121,8 @@ h3  {
   margin-bottom: 15px;
   margin-top: 15px;
   border: 1pt solid lightblue;
+  background-color: #0098FF;
+  background-color: #000;
 }
 
 #totalScoreDiv {
@@ -84,7 +130,13 @@ h3  {
   width: 95%;
   padding: 15px;
   margin-bottom: 15px;
-  border: 1pt solid lightblue;
+  border-top: 1pt solid lightblue;
+}
+
+#totalScoreId {
+  font-size: 2.2em;
+  color: gold;
+  font-weight: bold;
 }
 
 #gameStatusDiv  {
@@ -93,8 +145,11 @@ h3  {
   padding: 15px;
   margin-bottom: 15px;
   text-align: center;
-  border: 1pt solid lightblue;
+  border-top: 1pt solid lightblue;
+}
 
+#gameStatusId {
+  color: yellow;
 }
 
 li {   /*Undo what the reset.css file does to list items */ 
@@ -102,10 +157,13 @@ li {   /*Undo what the reset.css file does to list items */
   list-style-position: inside;
   list-style-type: disc;
   list-style-image: none;
+  text-indent: 12px;
+
 }
 
 table {
   width: 100%;
+  text-align: center;
 }
 
 #jewel1,
