@@ -67,12 +67,10 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
     console.log("checkScore: targetNum = " + targetNum + " and totalScore = " + totalScore);
     if (totalScore === targetNum) {   //Player wins.
       console.log("checkScore: Player wins"); //For testing.
+      
       //Turn off click counter on jewels until game resets.
-        $("#jewel0").off("click"); 
-        $("#jewel1").off("click"); 
-        $("#jewel2").off("click"); 
-        $("#jewel3").off("click"); 
-      //Write message to Game Status div.
+        turnOffClicks();
+     //Write message to Game Status div.
         $("#gameStatusId").html("<h3>YOU WON!</h3>");  
         playerWon = true;  
         winCount += 1;
@@ -82,6 +80,8 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
     }
     else if (totalScore > targetNum) {    //Player loses.
       console.log("checkScore: Player loses");  //For testing.
+      //Turn off click counter on jewels until game resets.
+      turnOffClicks() 
       $("#gameStatusId").html("<h3>Uh-Oh... YOU LOST!</h3>");
       playerWon = false;
       lossCount += 1;
@@ -93,6 +93,13 @@ $(document).ready(function()  {  // Document ready function. Waits until HTML pa
       $("#gameStatusId").html("Game in Progress.");  //Update the Game Status Div.
     }
   };  
+
+  function turnOffClicks() {   //Turn off click counter on jewels until game resets.
+        $("#jewel0").off("click"); 
+        $("#jewel1").off("click"); 
+        $("#jewel2").off("click"); 
+        $("#jewel3").off("click"); 
+  };
 
 
   function playAgain() {  //Prompts player to play again after a Win or Loss.
